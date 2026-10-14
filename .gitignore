@@ -1,0 +1,13 @@
+# Build output
+.build/
+.swiftpm/
+dist/
+*.dmg
+build.log
+env-check.log
+
+# macOS
+.DS_Store
+
+# Editor
+.vscode/
