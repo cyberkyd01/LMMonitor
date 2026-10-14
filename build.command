@@ -60,6 +60,8 @@ rm -rf "$STAGE"
 if [ "$LAUNCH" = 1 ]; then
   echo "== Launching app…"
   pkill -x LMMonitor 2>/dev/null
+  # The old copy needs up to ~1 s to stop its lms helpers; `open` would just hand off to it.
+  for _ in 1 2 3 4 5 6 7 8 9 10; do pgrep -x LMMonitor >/dev/null || break; sleep 0.3; done
   open "$APP"
 fi
 echo "STATUS=OK"

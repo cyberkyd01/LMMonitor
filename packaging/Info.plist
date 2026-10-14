@@ -23,7 +23,7 @@
     <key>LSApplicationCategoryType</key>
     <string>public.app-category.developer-tools</string>
     <key>NSHumanReadableCopyright</key>
-    <string>LM Monitor — local LM Studio monitor</string>
+    <string>Copyright © 2026 cyberkyd01. MIT License.</string>
     <key>NSUserNotificationsUsageDescription</key>
     <string>LM Monitor alerts you about GPU memory errors, model load failures, swap growth and runaway generations.</string>
     <key>LSUIElement</key>

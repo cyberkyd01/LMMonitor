@@ -2,6 +2,10 @@
 
 LM Monitor is a macOS menu bar app that shows what LM Studio is doing in real time: generation speed, prompt processing, prefix-cache reuse, context use, and the Mac's CPU, GPU, memory, disk and power. It also warns about problems such as GPU out-of-memory errors, swap, and runaway generations.
 
+## Download
+
+Get `LMMonitor.dmg` from the [latest release](https://github.com/cyberkyd01/LMMonitor/releases/latest), or build it yourself (see [Build](#build)). See [Install](#install) for the first-launch step.
+
 ## What you see
 
 ### Menu bar
@@ -109,7 +113,12 @@ Build output goes to `build.log`.
 
 1. Open `LMMonitor.dmg`.
 2. Drag LM Monitor to Applications.
-3. The app is ad-hoc signed, so the first time, right-click it and choose Open, then Open again.
+3. The app is ad-hoc signed, not notarized, so macOS blocks the first launch of a downloaded copy:
+   - macOS 15 or later: open it once, then go to System Settings → Privacy & Security and click "Open Anyway".
+   - macOS 13–14: right-click it, choose Open, then Open again.
+   - Or, in Terminal: `xattr -dr com.apple.quarantine /Applications/LMMonitor.app`
+
+   A copy you built yourself with `build.command` opens normally.
 
 For launch at login, turn it on in Settings. macOS may ask you to approve it in System Settings → General → Login Items.
 
@@ -164,3 +173,7 @@ The proxy is not needed anymore and is off by default. When enabled, it listens 
 - `Sources/LMMonitor/SelfTest`: fixtures and tests run by `--selftest`
 - `packaging/`: Info.plist, icon
 - `build.command`: build script
+
+## License
+
+MIT. See [LICENSE](LICENSE).
