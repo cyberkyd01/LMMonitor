@@ -177,3 +177,11 @@ The proxy is not needed anymore and is off by default. When enabled, it listens 
 ## License
 
 MIT. See [LICENSE](LICENSE).
+
+---
+
+## ⭐ Support
+
+Please give stars and if possible Buy me a coffee (USDT-TRC20) - `TA216k3WgWTrKnUKxZrSDNGzSJj3eHtEcH`
+
+Telegram: [@Cyberkyd](https://t.me/Cyberkyd)
